@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   # CREATE
   post("/insert_bookmark", { :controller => "bookmarks", :action => "create" })
           
-  # READ
+  # READio 
+
+  get("/", { :controller => "movies", :action => "index" })
+
   get("/bookmarks", { :controller => "bookmarks", :action => "index" })
   
   get("/bookmarks/:path_id", { :controller => "bookmarks", :action => "show" })
